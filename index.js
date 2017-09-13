@@ -88,7 +88,8 @@ module.exports = function DWGuide(dispatch) {
 	dispatch.hook('S_ACTION_STAGE', 1, (event) => {
 		if (!enabled || !boss) return;
 		if (boss.id - event.source == 0) {
-			systemMessage(event.skill);
+			systemMessage(''+event.skill);
+			//1171391770:  Odd/RED circles
 		}
 	});
 }
