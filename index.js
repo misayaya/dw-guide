@@ -90,16 +90,25 @@ module.exports = function DWGuide(dispatch) {
 		if (boss.id - event.source == 0) {
 			//systemMessage(''+event.skill);
 			//Bandersnatch actions
-			//1171391770:  Odd/RED circles
+			//pre 50%
+			//1171391770:  Odd/Red circles
 			//1171391771:  Even/Blue circles
 			//1171391775:  Red inner explosion
 			//1171391776:  Red outer explosion
 			//1171391777:  Blue inner explosion
 			//1171391778:  Blue outer explosion
-			if (event.skill==1171391775 || event.skill==1171391777) {
+			//post 50%
+			//1171391779:  Red inner explosion
+			//1171391780:  Red outer explosion
+			//1171391781:  Blue inner explosion
+			//1171391782:  Blue outer explosion
+			//1171391783:  Odd/Red body/Green circles
+			//1171391784:  Even/Blue body/Green circles
+			
+			if (event.skill==1171391775 || event.skill==1171391777 || event.skill==1171391779 || event.skill==1171391781) {
 				sendMessage('OUT OUT OUT');
 			}
-			if (event.skill==1171391776 || event.skill==1171391778) {
+			if (event.skill==1171391776 || event.skill==1171391778 || event.skill==1171391780 || event.skill==1171391782) {
 				sendMessage('IN IN IN IN');
 			}
 		}
