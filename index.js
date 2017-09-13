@@ -14,7 +14,7 @@ module.exports = function DWGuide(dispatch) {
 	
 	let boss = null;
 	let enabled = true;
-	let	sendToParty = false;
+	let sendToParty = false;
 	
 	
 	//Chat hooks and messages
@@ -83,12 +83,12 @@ module.exports = function DWGuide(dispatch) {
 				boss = null;
 			}
 		}
-	}
+	});
 	
 	dispatch.hook('S_ACTION_STAGE', 1, (event) => {
 		if (!enabled || !boss) return;
 		if (boss.id - event.source == 0) {
 			systemMessage(event.skill);
 		}
-	}
+	});
 }
