@@ -88,8 +88,20 @@ module.exports = function DWGuide(dispatch) {
 	dispatch.hook('S_ACTION_STAGE', 1, (event) => {
 		if (!enabled || !boss) return;
 		if (boss.id - event.source == 0) {
-			systemMessage(''+event.skill);
+			//systemMessage(''+event.skill);
+			//Bandersnatch actions
 			//1171391770:  Odd/RED circles
+			//1171391771:  Even/Blue circles
+			//1171391775:  Red inner explosion
+			//1171391776:  Red outer explosion
+			//1171391777:  Blue inner explosion
+			//1171391778:  Blue outer explosion
+			if (event.skill==1171391775 || event.skill==1171391777) {
+				sendMessage('OUT OUT OUT');
+			}
+			if (event.skill==1171391776 || event.skill==1171391778) {
+				sendMessage('IN IN IN IN');
+			}
 		}
 	});
 }
