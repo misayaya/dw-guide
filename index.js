@@ -73,7 +73,6 @@ module.exports = function DWGuide(dispatch) {
 		if (!enabled) return;
 		
 		if (event.huntingZoneId == dw) {
-			if(event.templateId == bandersnatch) {
 				boss = event;
 			}
 		}
